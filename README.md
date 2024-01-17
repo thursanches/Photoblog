@@ -3,5 +3,4 @@
 </div>
 
 <h1>Photoblog</h1>
-<p>This is Rocketseat Explorer's seventh HTML & CSS project.</p>
-# Photoblog
+<p>This is Rocketseat Explorer's seventh HTML & CSS project. Where we worked with animation concepts.</p>
