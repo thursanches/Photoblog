@@ -2,18 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-font-smoothing: antialised;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
   font-size: 62.5%;
 
-  --color-base-white: #ffffff;
-  --color-base-gray-100: #f5f5f5;
-  --color-base-gray-300: #8d8d99;
-  --color-base-gray-500: #3d3d3d;
-  --color-base-gray-900: #202024;
+  --hue: 100;
+  --color-base-white: hsl(0, 0%, 100%);
+  --color-base-gray-100: hsl(0, 0%, 96%);
+  --color-base-gray-300: hsl(var(--hue), 60%, 58%);
+  --color-base-gray-500: hsl(0, 0%, 24%);
+  --color-base-gray-900: hsl(var(--hue), 60%, 20%);
 }
 
 html,
@@ -61,7 +62,7 @@ header form {
 nav ul {
   list-style: none;
   font-size: 1.8rem;
-  color: var(color-base-gray-300);
+  color: var(--color-base-gray-300);
 }
 
 ul li.active {
@@ -101,7 +102,7 @@ ul li.active {
   border-radius: 50%;
 }
 
-/*galeria*/
+/* Galeria */
 main h1 {
   padding-top: 1.6rem;
   font-size: 2.4rem;
@@ -128,11 +129,11 @@ main h1 {
 
   transition: all 200ms ease-out;
 
-  display: inline-block;
+  display: block;
 }
 
 .item img:hover {
-  filter: hue-rotate(7deg) contrast(101%) sature(200%);
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
   transform: scale(1.1) rotate(-2deg);
 }
 
@@ -148,7 +149,7 @@ main h1 {
 }
 
 .tags {
-  margin-top: 1rem;
+  margin-top: 1.2rem;
 }
 
 .tags span {
@@ -184,9 +185,10 @@ footer {
 }
 
 .item {
-  --delay: .4s
-  animation: appear 0.4s var9(--delay) backwards;
+  --delay: 0.4s;
+  animation: appear 0.4s var(--delay) backwards;
 }
+
 @keyframes appear {
   0% {
     opacity: 0;
