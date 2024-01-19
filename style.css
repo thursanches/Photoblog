@@ -14,10 +14,11 @@
   --color-base-gray-300: #8d8d99;
   --color-base-gray-500: #3d3d3d;
   --color-base-gray-900: #202024;
-
 }
 
-html,body, input {
+html,
+body,
+input {
   font-family: "Mulish", sans-serif;
 }
 
@@ -88,7 +89,7 @@ ul li.active {
 
 .input-wrapper input::placeholder {
   opacity: 0.56;
-  color: var(--color-base-gray-500)
+  color: var(--color-base-gray-500);
 }
 
 .avatar {
@@ -98,9 +99,28 @@ ul li.active {
   object-fit: cover;
 
   border-radius: 50%;
-  
-  footer {
-    text-align: center;
-    padding: 1.6rem;
-    font-weight: 600;
-  }
+}
+
+/*galeria*/
+main h1 {
+  padding-top: 1.6rem;
+  font-size: 2.4rem;
+}
+
+.gallery {
+  margin-top: 3.2rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+}
+
+.item img {
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
+  padding: 1.6rem;
+  font-weight: 600;
+}
